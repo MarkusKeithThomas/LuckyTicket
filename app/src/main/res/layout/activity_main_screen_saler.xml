@@ -1,0 +1,72 @@
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".saler.MainScreenSalerActivity">
+
+        <!-- Nội dung chính của ứng dụng nằm trong ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Toolbar tùy chỉnh -->
+            <include
+                layout="@layout/custom_toolbar"
+                android:id="@+id/toolbar_saler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView ở giữa màn hình -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/rounded_background"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_saler" />
+
+            <!-- FrameLayout để chứa các Fragment -->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/rounded_background"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_saler"
+                app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Bottom Navigation nằm ở phía dưới -->
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_nav_menu_saler"
+                app:labelVisibilityMode="labeled"
+                app:itemTextColor="@color/nav_item_text_color"
+                app:itemIconTint="@color/nav_item_icon_color" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Navigation Drawer (ngăn kéo điều hướng) -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/drawer_menu"
+            app:headerLayout="@layout/header_layout" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

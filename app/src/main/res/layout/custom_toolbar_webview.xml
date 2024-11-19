@@ -1,0 +1,47 @@
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/toolbar_saler"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/rounded_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:layout_marginStart="0dp"
+        android:gravity="start|center_vertical">
+
+        <!-- Tên ứng dụng -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_close"
+            android:src="@drawable/icon_close"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/toolbar_title_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vé Số May Mắn"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/blue"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Thời gian -->
+        <TextView
+            android:id="@+id/toolbar_time_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chu Nhat, 17/10"
+            android:textStyle="italic"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

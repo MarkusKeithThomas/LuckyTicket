@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "928059962217",
+    "firebase_url": "https://vesomayman-dd0d8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "vesomayman-dd0d8",
+    "storage_bucket": "vesomayman-dd0d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928059962217:android:eb563ccc49e3f7c4e343f8",
+        "android_client_info": {
+          "package_name": "ticket.luckyticket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6xiIYWehcXvpvW9dzDKEA9hX6RdT0Eug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="ratingSaler"
+            type="ticket.luckyticket.saler.model.RatingForSaler" />
+    </data>
+
+    <!-- Thông tin căn cước công dân -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/background_gradient"
+                android:padding="4dp">
+                <TextView
+                    android:id="@+id/profile_comment_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='@{"Comment: " + ratingSaler.contentComment}'
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Đánh giá: "
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/profile_rating"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#E60808"
+                        android:textStyle="bold"
+                        android:text="@{ratingSaler.ratingComment}"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/profile_tỉme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{"Time: " + ratingSaler.convertTimestampToString()}'
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

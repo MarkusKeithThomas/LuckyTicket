@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="chattingAB"
+            type="ticket.luckyticket.buyer.model.ChattingAB" />
+        <import type="android.view.View"/>
+        <variable
+            name="isMine"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <!-- Nếu là người nhận (người dùng hiện tại là người nhận) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:visibility='@{isMine ? View.GONE : View.VISIBLE}'>
+
+            <TextView
+                android:id="@+id/text_recieverID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/rounded_message_background"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@{chattingAB.messageContent}"/>
+
+            <TextView
+                android:id="@+id/time_recieverID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="8sp"
+                android:text="@{chattingAB.convertTime()}"/>
+        </LinearLayout>
+
+        <!-- Nếu là người gửi (người dùng hiện tại là người gửi) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:visibility='@{isMine ? View.VISIBLE : View.GONE}'>
+
+            <TextView
+                android:id="@+id/text_senderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/messange_orther"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@{chattingAB.messageContent}"/>
+
+            <TextView
+                android:id="@+id/textTime_senderID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="8sp"
+                android:text="@{chattingAB.convertTime()}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

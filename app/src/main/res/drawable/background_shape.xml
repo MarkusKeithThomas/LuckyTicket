@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Màu nền chính -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#F3A992"/> <!-- Màu hồng nhạt -->
+        </shape>
+    </item>
+
+</layer-list>

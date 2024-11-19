@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_chatting_buyer"
+        android:icon="@drawable/baseline_chat_bubble_24"
+        android:iconTint="#E1AF18"
+        android:title="Chatting" />
+
+    <item
+        android:id="@+id/nav_history_buyer"
+        android:icon="@drawable/icon_history_base"
+        android:iconTint="#E1AF18"
+
+        android:title="History" />
+    <item
+        android:id="@+id/nav_home_buyer"
+        android:icon="@drawable/icon_home_base"
+        android:iconTint="#E1AF18"
+
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_buyer"
+        android:icon="@drawable/icon_sold_base"
+        android:iconTint="#E1AF18"
+
+        android:title="Buy" />
+    <item
+        android:id="@+id/nav_profile_buyer"
+        android:icon="@drawable/icon_profile"
+        android:iconTint="#E1AF18"
+
+        android:title="Profile" />
+
+</menu>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_background"
+    tools:context=".saler.AddNewTicketActivity">
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar_saler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tvThongTin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Vui lòng thêm các thông tin vé cần bán"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_saler" />
+
+    <!-- ImageView -->
+
+    <!-- First Spinner -->
+
+    <ImageView
+        android:id="@+id/image_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/spenner_border"
+        android:src="@drawable/add_new_ticket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvThongTin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/secondaryColor"
+        android:text="Tên Đài"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_tendai"
+        app:layout_constraintStart_toStartOf="@+id/spinner_tendai"
+        app:layout_constraintTop_toBottomOf="@+id/image_ticket" />
+
+    <Spinner
+        android:id="@+id/spinner_tendai"
+        android:layout_width="0dp"
+        android:layout_height="60sp"
+        android:layout_margin="15dp"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:background="@drawable/spenner_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_ticket" />
+
+    <!-- TextInputLayout with EditText -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/secondaryColor"
+        android:text="Sáu Số Vé Số"
+        app:layout_constraintBottom_toTopOf="@+id/number_layout"
+        app:layout_constraintStart_toStartOf="@+id/number_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/number_layout"
+        android:layout_width="0dp"
+        android:layout_height="60sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/primaryColor"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tendai">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_number_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/spenner_border"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Second Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/secondaryColor"
+        android:text="Số lượng vé bán"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_sove"
+        app:layout_constraintStart_toStartOf="@+id/spinner_sove"
+        app:layout_constraintTop_toBottomOf="@+id/number_layout" />
+
+    <!-- Buttons and ProgressBar -->
+    <Spinner
+        android:id="@+id/spinner_sove"
+        android:layout_width="0dp"
+        android:layout_height="60sp"
+        android:layout_margin="15dp"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:background="@drawable/spenner_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_layout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btncontinute_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="4dp"
+        android:text="Tiếp Tục Nhập"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sove" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnsave_backhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="45dp"
+        android:elevation="4dp"
+        android:text="Lưu Về Home"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sove"
+        app:backgroundTint="@color/bluedark"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/btncontinute_input"
+        app:layout_constraintStart_toEndOf="@+id/btnsave_backhome"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sove" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
