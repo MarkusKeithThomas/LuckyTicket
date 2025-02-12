@@ -11,15 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.firebase.Timestamp;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.Locale;
 
 import ticket.luckyticket.R;
 import ticket.luckyticket.databinding.ListInformationTicketBinding;
 import ticket.luckyticket.diffutil.TicketDiffCallback;
 import ticket.luckyticket.myinterface.OnItemClickListener;
-import ticket.luckyticket.saler.fragment.SoldFragmentSaler;
 import ticket.luckyticket.saler.model.TicketInformation;
 
 public class SoldFragmentSalerAdapter extends RecyclerView.Adapter<SoldFragmentSalerAdapter.MySoldFragmentViewHolder> {
@@ -63,15 +60,6 @@ public class SoldFragmentSalerAdapter extends RecyclerView.Adapter<SoldFragmentS
         this.ticketInformationList.addAll(newTicketInformationList);
         // Sử dụng DiffUtil để chỉ cập nhật những item thay đổi
         diffResult.dispatchUpdatesTo(this);
-    }
-
-    public TicketInformation getItemPositionAt(int position) {
-        return ticketInformationList.get(position);
-    }
-
-    public void removeItemTicket(int position) {
-        ticketInformationList.remove(position);
-        notifyItemRemoved(position);
     }
 
 

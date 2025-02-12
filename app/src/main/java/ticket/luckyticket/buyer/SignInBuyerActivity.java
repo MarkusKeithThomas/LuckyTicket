@@ -58,7 +58,7 @@ public class SignInBuyerActivity extends AppCompatActivity {
         });
         signInSalerViewModel.getFireUser().observe(this,user ->{
             if (user!=null){
-                Intent intent = new Intent(SignInBuyerActivity.this,MainScreenSalerActivity.class);
+                Intent intent = new Intent(SignInBuyerActivity.this,MainScreenBuyerActivity.class);
                 startActivity(intent);
                 finish();
             }

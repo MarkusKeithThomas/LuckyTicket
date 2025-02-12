@@ -104,7 +104,6 @@ public class BuyTicketActivity extends AppCompatActivity {
             public void onChanged(TicketHistory ticketHistory) {
                 if (ticketHistory.getDocumentIdTicketHistory() != null) {
                     Log.d("BuyTicketActivity123", "Kiem tra thong tin ticketHistory: "+ticketHistory.getNameDai());
-                    Log.d("BuyTicketActivity123", "Kiem tra thong tin ticketHistory: "+ticketHistory.getTimeSaleBought());
 
 
                     Glide.with(getApplicationContext())
