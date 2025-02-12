@@ -36,7 +36,7 @@ public class ChattingBuySaleRepository {
 
 
     public ChattingBuySaleRepository() {
-        this.firebaseDatabase = FirebaseDatabase.getInstance("https://vesomayman-dd0d8.firebaseio.com/");
+        this.firebaseDatabase = FirebaseDatabase.getInstance("https://vesomayman-dd0d8-default-rtdb.asia-southeast1.firebasedatabase.app/");
         db = FirebaseFirestore.getInstance();
         collectionReference = db.collection("TicketHistory");
 
